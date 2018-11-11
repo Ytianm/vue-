@@ -1,5 +1,7 @@
 <template>
-  <div class="hello">
+  <div class="container">
+    <input type="text" class="search-input">
+    <button class="search-btn">搜索</button>
     <tree :list="treeData"></tree>
   </div>
 </template>
@@ -16,85 +18,85 @@ export default {
     return {
       treeData: [
         {
-          name: "中国",
+          name: "一级标题1",
           id:1,
           children: [
             { 
-              name: "北京", 
+              name: "二级标题1", 
               id:11,
             },
             { 
-              name: "上海",
+              name: "二级标题2",
               id:12, 
             },
             {
-              name: "深圳",
+              name: "二级标题3",
               id:13,
               children: [
                 {
-                  name: "南山区",
+                  name: "三级标题1",
                   id:131,
                   children: [
                     { 
-                      name: "科技园",
+                      name: "四级标题1",
                       id:1311, 
                     },
                     { 
-                      name: "深圳湾",
+                      name: "四级标题2",
                       id:1312,
                     },
                     { 
-                      name: "后海",
+                      name: "四级标题3",
                       id:1313, 
                     }
                   ]
                 },
                 { 
-                  name: "福田区",
+                  name: "三级标题2",
                   id:132, 
                 },
                 { 
-                  name: "罗湖区",
+                  name: "三级标题3",
                   id:133, 
                 }
               ]
             },
             {
-              name: "广州",
+              name: "二级标题4",
               id:14,
               children: [
                 {
-                  name: "海珠区",
+                  name: "三级标题1",
                   id:141,
                   children: [
                     { 
-                      name: "小蛮腰",
+                      name: "四级标题1",
                       id:1411, 
                     }, 
                     { 
-                      name: "猎德大桥",
+                      name: "四级标题2",
                       id:1412, 
                     }
                   ]
                 },
                 { 
-                  name: "花都区",
+                  name: "三级标题2",
                   id:142, 
                 },
                 { 
-                  name: "越秀区",
+                  name: "三级标题3",
                   id:143, 
                 },
                 {
-                  name: "天河区",
+                  name: "三级标题4",
                   id:144,
                   children: [
                     { 
-                      name: "体育西",
+                      name: "四级标题1",
                       id:1441, 
                     }, 
                     { 
-                      name: "天河城",
+                      name: "四级标题2",
                       id:1442, 
                     }
                   ]
@@ -104,7 +106,7 @@ export default {
           ]
         },
         {
-          name:'其他',
+          name:'一级标题2',
           id:2
         }
       ]
@@ -118,4 +120,14 @@ export default {
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped>
+.search-input{
+  width:200px;
+  height: 40px;
+  margin:10px;
+}
+.search-btn{
+  width:100px;
+  height: 44px;
+  font-size: 15px;
+}
 </style>

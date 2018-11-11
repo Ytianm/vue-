@@ -80,19 +80,18 @@ body {
   color: #444;
 }
 .item-text {
-  font-size: 25px;
+  font-size: 20px;
   color: #333;
   height: 50px;
   line-height: 50px;
   padding-left: 5px; 
 }
 .active {
-  background: green;
+  background: rgb(92, 167, 92);
   color:#eee
 }
 ul {
-  padding-left: 1em;
-  line-height: 1.5em;
+  padding-left: 18px;
 }
 li{
   list-style: none;

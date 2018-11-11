@@ -71,10 +71,8 @@ export default {
 
 <style scoped>
 .bg {
-  position: fixed;
-  top: 0;
   width: 100%;
-  background: #eee;
+  /* background: #eee; */
 }
 li {
   list-style: dot;
