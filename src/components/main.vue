@@ -2,7 +2,7 @@
   <div class="container">
     <input type="text" class="search-input">
     <button class="search-btn">搜索</button>
-    <tree :list="treeData"></tree>
+    <tree :list="treeData2"></tree>
   </div>
 </template>
 
@@ -109,6 +109,58 @@ export default {
           name:'一级标题2',
           id:2
         }
+      ],
+      treeData2:[
+        {
+          id:1,
+          level:1,
+          name:"a"
+        },
+        {
+          id:2,
+          level:2,
+          name:"a1"
+        },
+        {
+          id:3,
+          level:2,
+          name:"a2"
+        },
+        {
+          id:4,
+          level:1,
+          name:"b"
+        },
+        {
+          id:5,
+          level:2,
+          name:"b1"
+        },
+        {
+          id:6,
+          level:2,
+          name:"b2"
+        },
+        {
+          id:7,
+          level:1,
+          name:"c"
+        },
+        {
+          id:8,
+          level:1,
+          name:"d"
+        },
+        {
+          id:9,
+          level:2,
+          name:"d1"
+        },
+        {
+          id:10,
+          level:2,
+          name:"d2"
+        },
       ]
     };
   },
