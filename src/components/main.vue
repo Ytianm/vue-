@@ -1,7 +1,5 @@
 <template>
   <div class="container">
-    <input type="text" class="search-input">
-    <button class="search-btn">搜索</button>
     <tree :list="treeData2"></tree>
   </div>
 </template>
@@ -114,52 +112,77 @@ export default {
         {
           id:1,
           level:1,
-          name:"a"
+          name:"中国"
         },
         {
           id:2,
           level:2,
-          name:"a1"
+          name:"上海"
         },
         {
           id:3,
           level:2,
-          name:"a2"
+          name:"北京"
+        },
+        {
+          id:321,
+          level:3,
+          name:"北京大学"
+        },
+        {
+          id:322,
+          level:3,
+          name:"清华大学"
         },
         {
           id:4,
           level:1,
-          name:"b"
+          name:"印度尼西亚"
         },
         {
           id:5,
           level:2,
-          name:"b1"
+          name:"雅加达"
         },
         {
           id:6,
           level:2,
-          name:"b2"
+          name:"万隆"
         },
         {
           id:7,
           level:1,
-          name:"c"
+          name:"加拿大"
         },
         {
           id:8,
           level:1,
-          name:"d"
+          name:"美国"
         },
         {
           id:9,
           level:2,
-          name:"d1"
+          name:"华盛顿"
         },
         {
           id:10,
           level:2,
-          name:"d2"
+          name:"洛杉矶"
+        },
+         {
+          id:8,
+          level:1,
+          name:"澳大利亚"
+        },
+        {
+          id:9,
+          level:2,
+          name:"堪培拉"
+        },
+        {
+          id:10,
+          level:2,
+          name:"悉尼"
         },
       ]
     };
@@ -172,14 +195,4 @@ export default {
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped>
-.search-input{
-  width:200px;
-  height: 40px;
-  margin:10px;
-}
-.search-btn{
-  width:100px;
-  height: 44px;
-  font-size: 15px;
-}
 </style>

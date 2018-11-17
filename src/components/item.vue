@@ -2,7 +2,7 @@
   <li>
     <div @click="toggle(model)" class="item-text" :class="selectClass">
       <span>{{ model.name }}</span>
-      <span v-if="isFolder">[{{ open ? '-' : '+' }}]</span>
+      <span v-if="isFolder">[{{ model.isFolder ? '-' : '+' }}]</span>
     </div>
     <ul v-show="model.isFolder">
       <item
@@ -42,24 +42,24 @@ export default {
       }
       model.isFolder = !model.isFolder;
 
-      let recurFunc = (data) => {
+      let checkClick = (data) => {
         data.forEach(item => {
-          if (item.id == model.id) { //当前点击的选项
+          if (item.name == model.name) { //当前点击的选项
             item.clickNode = true;
           } else {  //其他选项
             item.clickNode = false;
           }
 
           if (item.children) {  //如果有子选项，再递归遍历
-            recurFunc(item.children); 
+            checkClick(item.children); 
           }
         });
       };
 
       //遍历所有data
-      recurFunc(this.trees);
+      checkClick(this.trees);
       
-      console.log(this.model.name)
+      // console.log(this.open)
     }
   },
   computed: {
@@ -84,10 +84,10 @@ body {
   color: #333;
   height: 50px;
   line-height: 50px;
-  padding-left: 5px; 
+  padding-left: 10px; 
 }
 .active {
-  background: rgb(92, 167, 92);
+  background: #5ca75c;
   color:#eee
 }
 ul {
